@@ -52,6 +52,8 @@ body{
 	background: url(images/h1long.png) no-repeat;
 	text-shadow: #fff 1px 0 1px;
 	cursor: default;
+	
+	border-radius: 4px 4px 0px 0px;
 }
 
 .draggableWindow h1 span{
@@ -59,11 +61,15 @@ body{
 	height: 21px;
 	float: left;
 	background: url(images/h1short.png) no-repeat left;
+	
+	border-radius: inherit;
 }
 
 .content{
 	background: white;
 	padding: 36px;
+	
+	border-radius: 4px 4px 0px 0px;
 }
 
 .content h2{
