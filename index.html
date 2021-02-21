@@ -2,21 +2,148 @@
 <html>
 <head>
 	<title>Leopard Dashboard</title>
-	<script src="js/jquery-1.2.6.min.js" type="text/javascript"></script>
-	<script src="js/jquery.ui.interaction.min.js" type="text/javascript"></script>
-	<script src="js/dashboard.js" type="text/javascript"></script> 
-	<script src="js/jquery.jqDock.min.js" type="text/javascript"></script>
-	<style type="text/css">
-		@import url(style.css);
-	</style>
+
+	<!--css-->
+	<!--http://fstoke.me/jquery/window/
+        1. jquery ui theme loader
+        2. jquery window css
+    -->
+	<link id="jquery_ui_theme_loader" type="text/css" href="js/jquery/themes/black-tie/jquery-ui.css" rel="stylesheet" />
+    <link type="text/css" href="js/jquery/window/css/jquery.window.css" rel="stylesheet" />
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+	<!--js-->
+	<script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery/window/jquery.window.js"></script>
+    <link type="text/css" href="style.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.menu.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+    <!--<div class="menubar"></div>-->
+    <div id="menu-bar">
+        <ul class="main-menu">
+            <li>
+            <img alt="plus"/>
+            <ul>
+                <li>
+                Application
+                <ul>
+                    <li><a href="http://www.google.com/" target="_blank">Google search (opens in new tab)</a></li>
+                    <li class="separator"></li>
+                    <li><a onclick="createWindow()" href="#">Product</a></li>
+                    <li><a onclick="window1jq()" href="#">Document</a></li>
+                    <li><a onclick="window1th()" href="#">Client</a></li>
+                    <li><a onclick="CreditsDialog()" href="#">Credits</a></li>
+                </ul>
+                </li>
+                        <li class="separator"></li>
+                        <li class="icon save disabled"><a href="javascript:void(0)">Save<span>Ctrl+S</span></a></li>
+                        <li class="separator"></li>
+                        <li><a href="#" onclick="toggleFullScreen()">Fullscreen</a></li>
+                        <li>Reset</li>
+                        <li><a href="javascript:void(0)">Restart</a></li>
+                        <li><a href="#" onclick="ShutdownDialog()">Shutdown</a></li>
+                    </ul>
+                </li>
+                <li>
+                    View
+                    <ul>
+                        <li>Documents
+                            <ul>
+                                <li>All</li>
+                                <li class="separator"></li>
+                                <li>Unfinished</li>
+                                <li>Closed</li>
+                            </ul>
+                        </li>
+                        <li><a href="/#!/products">Products</a></li>
+                        <li class="separator"></li>
+                        <li>
+                            First level
+                            <ul>
+                                <li>
+                                    Second level
+                                    <ul>
+                                        <li>
+                                            Third level menu item
+                                        </li>
+                                        <li>
+                                        Third level
+                                        <ul>
+                                                <li>
+                                                    Forth level menu item 1
+                                                </li>
+                                                <li>
+                                                    Forth level menu item 2
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="separator"></li>
+                                        <li>Another third level menu item</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Items will make menus stretch as needed
+                                </li>
+                                <li class="separator"></li>
+                                <li>
+                                     Another menu item
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="separator"></li>
+                        <li>Reports
+                            <ul>
+                                <li>Sell history</li>
+                                <li>Clients history</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Settings
+                    <ul>
+                        <li>
+                            Style configurator
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            Account
+                            <ul>
+                                <li>Company data</li>
+                                <li>Personal data</li>                            
+                            </ul>
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            Options
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Help
+                    <ul>
+                        <li>Index</li>
+                        <li class="separator"></li>
+                        <li>Upgrade account</li>
+                        <li>Registration</li>
+                        <li class="separator"></li>
+                        <li>Contact us</li>
+                    </ul>
+                </li>
+            </ul><!-- end mainmenu -->        
+        </div>
+
 	<div id="wrapper">
 	<ul id="desktopItems">
 		<li id="macintoschHD">
 			<span>Macintosch HD</span>
 		</li>
-	</ul>
+    </ul>
+    <!--
 	<div class="draggableWindow">
 		<h1><span></span>Leopard Dashboard with jQuery</h1>
 		<div class="content">
@@ -24,14 +151,17 @@
 			<p>jQuery is pretty cool. I mean, look at all this cool stuff it can do. A dock (<a href="http://www.wizzud.com/jqDock/">Sourced from Wizzud.com! Thanks!</a>), a dashboard, and draggable windows! Awesome! If you didn't get here via it, this is the demo of a tutorial from <a href="http://nettuts.com">Nettuts</a>.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-	</div>
-	<div class="draggableWindow" id="smaller">
+    </div>
+    -->
+    <!--
+    <div class="draggableWindow" id="smaller">
 		<h1><span></span>A smaller window</h1>
 		<div class="content">
 			<p>A small dialogue window styled in style.css</p>
 		</div>
-	</div>
-		
+    </div>
+    -->
+	<!--
 		<div id="dashboardWrapper">
 			<ul id="widgets">
 				<li class="widget"><img src="images/widgets/googlesearch.png" alt="" /></li>
@@ -50,14 +180,20 @@
 			</div>
 		</div>
 		</div>
+	-->
 	</div>
-	<ul id="dock">
+	<!--<ul id="dock">
 		<li><img src="images/finder.png" alt="Finder" title="finder" class="dockItem"/></li>
 		<li><img src="images/dashboard.png" alt="Dashboard" id="dashboardLaunch" title="Dashboard" class="dockItem"/></li>
 	    <li><img src="images/mail.png" alt="Mail" title="finder" class="dockItem" /></li>
 	    <li><img src="images/coda.png" alt="Coda" title="Coda" class="dockItem" /></li>
-	</ul>
-	<div class="stack">
+	</ul>-->
+	<div id="MinimizerBar" style="    width: 100%;
+    height: 20px;
+    bottom: 0;
+    background: url(images/bottom.png);
+    position: fixed;opacity: 70%;"></div>
+	<!--<div class="stack">
 	<img src="images/stack.png" alt="stack"/>
 		<ul id="stack1">
 			<li><span>Acrobat</span><img src="images/adobeAcrobat.png" alt="" /></li>
@@ -66,6 +202,88 @@
 			<li><span>Safari</span><img src="images/safari.png" alt="" /></li>
 			<li><span>Finder</span><img src="images/finder.png" alt="" /></li>
 		</ul>
-	</div>
+	</div>-->
+    <script src="app.js"></script>
+	
+    <div id="window_block2" style="display:none;">
+        <div style="padding:10px;">
+           <div style="font-size:24px; font-weight:bold; margin-bottom:10px; color:#44aaff;">Introduction</div>
+           <img style="border:0; float:left; margin:10px;" src="http://lh5.ggpht.com/_W-5oCUN3-sQ/TNUfmAY_mFI/AAAAAAAADwc/Dav33v1iBlY/s144/Professional%20JavaScript%20for%20Web%20Developers.jpg">
+           <div>
+              <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+           </div>
+        </div>
+     </div>
+	 
+	 <div id="CreditsWindow" style="display:none;">
+   <div style="padding:10px;">
+      <div style="font-size:24px; font-weight:bold; margin-bottom:10px; color:#44aaff;">Introduction</div>
+      <img style="border:0; float:left; margin:10px;" src="http://lh5.ggpht.com/_W-5oCUN3-sQ/TNUfmAY_mFI/AAAAAAAADwc/Dav33v1iBlY/s144/Professional%20JavaScript%20for%20Web%20Developers.jpg">
+      <div>
+         If you want to achieve JavaScript's full potential, it is critical to understand its nature, history, and limitations. 
+         This book sets the stage by covering JavaScript from its very beginning to the present-day incarnations that include 
+         support for the DOM and Ajax. It also shows you how to extend this powerful language to meet specific needs and create
+         seamless client-server communication without intermediaries such as Java or hidden frames.
+      </div>
+   </div>
+</div>
+	 
+	 
+	 <div id="ShutdwnDialog" style="display:none;">
+   <div style="padding:10px;">
+      <div><a class="btn btn-default" href="#" role="button">Link</a>
+	  <a class="btn btn-default" href="#" role="button">Link</a></div>
+   </div>
+</div>
+
+
+
+<script>
+function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+</script>
+
 </body>
 </html>

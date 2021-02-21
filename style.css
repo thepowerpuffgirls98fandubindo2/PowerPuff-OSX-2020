@@ -3,6 +3,46 @@
 @font-face {font-family: "Corporate";src: url('fonts/138_FFF\ Corporate_8pt_st.ttf');}
 @font-face {font-family: "Corporate bold";src: url('fonts/47_FFF\ Corporate\ Bold_8pt_st.ttf');}
 @font-face{font-family: "Camera bold";src: url('fonts/45_FFF\ Camera\ Bold_8pt_st.ttf')}
+
+*::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+ 
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+}
+
+
+/* Buttons */
+*::-webkit-scrollbar-button:single-button {
+  background-color: #bbbbbb;
+  display: block;
+  height: 11px;
+  width: 11px;
+}
+/* Up */
+*::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("./images/scrollbar/scroll_up-button.png")
+}
+
+*::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url("./images/scrollbar/scroll_up-button-hover.png")
+}
+/* Down */
+*::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("./images/scrollbar/scroll_down-button.png")
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  background-image: url("./images/scrollbar/scroll_down-button-hover.png")
+}
+
+
 #menu-bar{
     background: url(images/menubar.png);
     height: 21px;
@@ -100,8 +140,8 @@ ul.main-menu li ul li, li .submenu{
     color: black;
 }
 ul.main-menu li ul li{
-    line-height: 18px!important;
-    height: 17px;
+    line-height: unset!important;
+    height: 20px;
 }
 ul.main-menu li ul li a span {
     font-size: 8px!important;

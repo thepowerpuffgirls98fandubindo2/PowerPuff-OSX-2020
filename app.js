@@ -1,7 +1,7 @@
 //setup
 $.window.prepare({
     dock: 'bottom',       // change the dock direction: 'left', 'right', 'top', 'bottom'
-    dockArea: $('#myDockArea'), // set the dock area
+    dockArea: $('#MinimizerBar'), // set the dock area
     animationSpeed: 200,  // set animation speed
     minWinLong: 180       // set minimized window long dimension width in pixel
  });
@@ -15,6 +15,17 @@ $.window.prepare({
 
 
 //app
+
+
+
+function CreditsDialog() {
+$.window({
+   maximizable: false,
+   icon: "http://www.fstoke.me/favicon.ico",
+   title: "Professional JavaScript for Web Developers",
+   content: $("#CreditsWindow").html(), // load window_block2 html content
+});
+}
 
 function createWindow() {
     $.window({
