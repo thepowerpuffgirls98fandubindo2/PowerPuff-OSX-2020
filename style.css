@@ -44,17 +44,35 @@
 
 
 #menu-bar{
-    background: url(images/menubar.png);
-    height: 21px;
+    background: url(images/menubar.png) repeat-x;
+    height: 20px;
     font-family: "Camera bold";
     font-size: 8px;
     color: white;
 }
 ul.main-menu > li {
-    line-height: 21px!important;
+    line-height: 20px!important;
     /*padding: 3px 4px 3px 6px!important;*/
+	padding: 5px 4px 5px 6px!important;
+	cursor: pointer!important;
+}
+ul.main-menu > li ul {
+	border-width: 0px!important;
 }
 
+ul li.plus-btn{
+	padding: 5px 0px 5px 0px!important;
+	border-width: 0px 0px 0 0px!important;
+}
+.plus-btn #menu-top-mask, .plus-btn.active-menu, .plus-btn:hover{
+	    background-color: transparent!important;
+}
+#plus-img {
+    content: url('images/menubar/button.png');
+}
+#plus-img:hover {
+    content: url('images/menubar/button-hover.png');
+}
 .window_panel{
     border: 0;
     border-radius: 4px 4px 0px 0px;
