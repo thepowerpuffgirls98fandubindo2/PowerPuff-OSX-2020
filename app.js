@@ -3,7 +3,7 @@ $.window.prepare({
     dock: 'bottom',       // change the dock direction: 'left', 'right', 'top', 'bottom'
     dockArea: $('#MinimizerBar'), // set the dock area
     animationSpeed: 200,  // set animation speed
-    minWinLong: 180       // set minimized window long dimension width in pixel
+    minWinLong: 180,       // set minimized window long dimension width in pixel
  });
 // assign the dock area
 
@@ -16,7 +16,14 @@ $.window.prepare({
 
 //app
 
-
+function PuffTunes() {
+$.window({
+   maximizable: false,
+   icon: "http://www.fstoke.me/favicon.ico",
+   title: "Professional JavaScript for Web Developers",
+   content: $("#CreditsWindow").html(), // load window_block2 html content
+});
+}
 
 function CreditsDialog() {
 $.window({
@@ -34,7 +41,7 @@ function createWindow() {
         icon: "http://www.google.com/favicon.ico",
         title: "Hello World!",
         content: "<h1>Hello World!</h1>",
-        footerContent: "<div style='color:gray;'>this is the footer</div>"
+        footerContent: "<div style='color:gray;'>this is the footer</div>",
     });
 }
 function ShutdownDialog() {
