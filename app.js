@@ -4,7 +4,20 @@ $.window.prepare({
     dockArea: $('#MinimizerBar'), // set the dock area
     animationSpeed: 200,  // set animation speed
     minWinLong: 180,       // set minimized window long dimension width in pixel
+	maxWidth: 600,
+   maxHeight: 500,
+   checkBoundary: true,
  });
+ 
+ function PuffTunes() {
+$("#wrapper").window({
+   maximizable: false,
+   icon: "http://www.fstoke.me/favicon.ico",
+   title: "Professional JavaScript for Web Developers",
+   checkBoundary: true,
+   content: $("#CreditsWindow").html(), // load window_block2 html content
+});
+}
 // assign the dock area
 
 //load menubar
@@ -17,10 +30,11 @@ $.window.prepare({
 //app
 
 function PuffTunes() {
-$.window({
+$("#wrapper").window({
    maximizable: false,
    icon: "http://www.fstoke.me/favicon.ico",
    title: "Professional JavaScript for Web Developers",
+   checkBoundary: true,
    content: $("#CreditsWindow").html(), // load window_block2 html content
 });
 }
