@@ -85,11 +85,12 @@ box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.4);
 	transition: 0.3s;
 }
 #nav > li > a:hover {
-    background-color:#e4ecf4;
-    border-color:#999
+    background-color:#00bfce;
+    border-color:#999;
+    color: #000 
 }
 #nav > li.selected  > a {
-    background-color:#FFFFFF;
+    background-color:#00bfce;
     border-color:#999999 #999999 #FFFFFF;
     z-index:2;
 }
@@ -248,7 +249,7 @@ box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.4);
 	grid-gap: 15px;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
 	float: right;
 }
 
@@ -258,14 +259,15 @@ box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.4);
 }
 
 .desktop-icons .item-style-icon .icon-name {
+    padding: 0px 4px;
 	margin-top: 4px;
 	color: #fff;
 	text-shadow: 1px 1px 4px #000;
 	font-weight: 600;
 	font-size: 8px;
-    line-height: 1.4;
+    line-height: 1.5;
     font-family: 'Corporate bold';
-	    background: black;
+	background: black;
 }
 
 .desktop-icons .item-style-icon:focus img {
@@ -356,11 +358,7 @@ iframe.window_frame {
 .window_panel .window_header .maximizeImg {background: url(images/buttons.gif) no-repeat;background-position: -48px;}
 .window_panel .window_header .cascadeImg {background: url(images/buttons.gif) no-repeat;background-position: -32px;}
 .window_panel .window_header .minimizeImg {background: url(images/buttons.gif) no-repeat;background-position: -16px;}
-.window_panel .window_header .bookmarkImg {
-    background: url(images/buttons.gif) no-repeat;
-    background-position: 0;
-    top: 4px;
-}
+.window_panel .window_header .bookmarkImg {background: url(images/buttons.gif) no-repeat;background-position: 0;top: 4px;}
 .window_panel .window_header .window_icon_button {margin-right: 2px;}
 ul.main-menu li ul li, li .submenu{
     color: black;
@@ -375,3 +373,4 @@ ul.main-menu li ul li a span {
 li.separator{
     height: 0!important;
 }
+

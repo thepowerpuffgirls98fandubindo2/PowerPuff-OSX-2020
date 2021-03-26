@@ -1,7 +1,7 @@
 //setup
 $.window.prepare({
     dock: 'bottom',       // change the dock direction: 'left', 'right', 'top', 'bottom'
-    dockArea: $('#MinimizerBar'), // set the dock area
+    //dockArea: $('#MinimizerBar'), // set the dock area
     animationSpeed: 200,  // set animation speed
     minWinLong: 180,       // set minimized window long dimension width in pixel
 	maxWidth: 600,

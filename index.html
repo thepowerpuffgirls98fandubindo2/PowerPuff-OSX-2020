@@ -2,18 +2,17 @@
 <html>
    <head>
       <title>Leopard Dashboard</title>
-      <!--css-->
       <!--http://fstoke.me/jquery/window/
          1. jquery ui theme loader
          2. jquery window css
-         -->
-      <link id="jquery_ui_theme_loader" type="text/css" href="js/jquery/themes/black-tie/jquery-ui.css" rel="stylesheet" />
+      -->
+      <link id="jquery_ui_theme_loader" type="text/css" href="js/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
       <link type="text/css" href="js/jquery/window/css/jquery.window.css" rel="stylesheet" />
       <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
       <link type="text/css" href="style.css" rel="stylesheet" /> 
-      <!--js-->
+
       <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
-      <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+      <script src="js/jquery-ui-1.12.1/jquery-ui.min.js" type="text/javascript"></script>
       <script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
       <script type="text/javascript" src="js/jquery/window/jquery.window.js"></script>
       <script src="js/bootstrap.min.js"></script>
@@ -185,6 +184,14 @@
                <img alt="icon-logo" src="./images/icons/generic-folder.png">
                <p class="icon-name">New Folder 1</p>
             </div>
+            <div class="item-style-icon" ondblclick="windowPPGYourself()" title="PPG Yourself" tabindex="1">
+               <img alt="icon-logo" src="./images/icons/generic-folder.png">
+               <p class="icon-name">Powerpuff Yourself</p>
+            </div>
+            <div class="item-style-icon" ondblclick="windowBlogspot()" title="Blogspot" tabindex="1">
+               <img alt="icon-logo" src="./images/icons/generic-folder.png">
+               <p class="icon-name">Blogspot</p>
+            </div>
             <div class="item-style-icon" ondblclick="CreditsDialog()" title="New Folder 2" tabindex="1">
                <img alt="icon-logo" src="./images/icons/generic-folder.png">
                <p class="icon-name">New Folder 2</p>
@@ -289,11 +296,11 @@
 		 
 		 
 		 });
-		 
+
 setInterval(function() {
     var date = new Date();
     $('#clock-wrapper').html(
-        date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+      ('0' + date.getHours()).slice(-2) + ":" + ('0' + date.getMinutes()).slice(-2) + ":" + ('0' + date.getSeconds()).slice(-2)
         );
 }, 500);
 
