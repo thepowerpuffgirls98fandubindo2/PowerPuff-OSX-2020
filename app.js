@@ -8,16 +8,7 @@ $.window.prepare({
    maxHeight: 500,
    checkBoundary: true,
  });
- 
- function PuffTunes() {
-$("#wrapper").window({
-   maximizable: false,
-   icon: "http://www.fstoke.me/favicon.ico",
-   title: "Professional JavaScript for Web Developers",
-   checkBoundary: true,
-   content: $("#CreditsWindow").html(), // load window_block2 html content
-});
-}
+
 // assign the dock area
 
 //load menubar
@@ -39,12 +30,30 @@ $("#wrapper").window({
 });
 }
 
+function TextEditor() {
+$.window({
+   maximizable: false,
+   icon: "http://www.fstoke.me/favicon.ico",
+   title: "Professional JavaScript for Web Developers",
+   content: $("#Textedit").html(), // load window_block2 html content
+});
+
+}
+
 function CreditsDialog() {
 $.window({
    maximizable: false,
    icon: "http://www.fstoke.me/favicon.ico",
    title: "Professional JavaScript for Web Developers",
    content: $("#CreditsWindow").html(), // load window_block2 html content
+});
+}
+function FormsDialog() {
+$.window({
+   maximizable: false,
+   icon: "http://www.fstoke.me/favicon.ico",
+   title: "Professional JavaScript for Web Developers",
+   content: $("#window_form").html(), // load window_block2 html content
 });
 }
 
@@ -78,6 +87,16 @@ function window1jq(){
         url: "http://apps.fstoke.me/",
         bookmarkable: true,
         showFooter: false,
+    });
+};
+function windowPPGYourself(){
+    $.window({
+        title: "Powerpuff Yourself",
+        url: "https://powerpuffyourself.com/",
+        bookmarkable: true,
+        showFooter: false,
+        width: 800,
+    height: 600,
     });
 };
 

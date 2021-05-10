@@ -16,6 +16,7 @@
       <script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
       <script type="text/javascript" src="js/jquery/window/jquery.window.js"></script>
       <script src="js/bootstrap.min.js"></script>
+
    </head>
    <body>
       <!--<div class="menubar"></div>-->
@@ -180,10 +181,14 @@
                <img alt="icon-logo" src="./images/icons/generic-folder.png">
                <p class="icon-name">New Folder</p>
             </div>
-            <div class="item-style-icon" ondblclick="window1jq()" title="New Folder 1" tabindex="1">
+            <div class="item-style-icon" ondblclick="TextEditor()" title="WYSIWYG-Text-Editor" tabindex="1">
                <img alt="icon-logo" src="./images/icons/generic-folder.png">
-               <p class="icon-name">New Folder 1</p>
+               <p class="icon-name">WYSIWYG Text Editor</p>
             </div>
+            <div class="item-style-icon" ondblclick="FormsDialog()" title="WYSIWYG-Text-Editor" tabindex="1">
+                <img alt="icon-logo" src="./images/icons/generic-folder.png">
+                <p class="icon-name">Forms</p>
+             </div>
             <div class="item-style-icon" ondblclick="windowPPGYourself()" title="PPG Yourself" tabindex="1">
                <img alt="icon-logo" src="./images/icons/generic-folder.png">
                <p class="icon-name">Powerpuff Yourself</p>
@@ -207,7 +212,7 @@
 		 
       <script src="app.js"></script>
 	  
-      <div id="window_block2" style="display:none;">
+      <div id="window_form" style="display:none;">
          <div style="padding:10px;">
             <div style="font-size:24px; font-weight:bold; margin-bottom:10px; color:#44aaff;">Introduction</div>
             <img style="border:0; float:left; margin:10px;" src="http://lh5.ggpht.com/_W-5oCUN3-sQ/TNUfmAY_mFI/AAAAAAAADwc/Dav33v1iBlY/s144/Professional%20JavaScript%20for%20Web%20Developers.jpg">
@@ -236,6 +241,30 @@
             </div>
          </div>
       </div>
+
+      <div id="Textedit" style="display:none;">
+        <div style="padding:0;">
+            <div class="form-group">
+            <textarea id="editor" class="form-control">
+                <h2>The three greatest things you learn from traveling</h2>
+            
+                <p>Like all the great things on earth traveling teaches us by example. Here are some of the most precious lessons I’ve learned over the years of traveling.</p>
+            
+                <h3>Appreciation of diversity</h3>
+            
+                <p>Getting used to an entirely different culture can be challenging. While it’s also nice to learn about cultures online or from books, nothing comes close to experiencing <a href="https://en.wikipedia.org/wiki/Cultural_diversity">cultural diversity</a> in person. You learn to appreciate each and every single one of the differences while you become more culturally fluid.</p>
+            
+                <figure class="image image-style-side"><img src="sample/img/umbrellas.jpg" alt="Three Monks walking on ancient temple.">
+                    <figcaption>Leaving your comfort zone might lead you to such beautiful sceneries like this one.</figcaption>
+                </figure>
+            
+                <h3>Confidence</h3>
+            
+                <p>Going to a new place can be quite terrifying. While change and uncertainty makes us scared, traveling teaches us how ridiculous it is to be afraid of something before it happens. The moment you face your fear and see there was nothing to be afraid of, is the moment you discover bliss.</p>
+            </textarea></div>
+        </div>
+     </div>
+
       <div id="CreditsWindow" style="display:none;">
          <div style="padding:10px;">
             <div style="font-size:24px; font-weight:bold; margin-bottom:10px; color:#44aaff;">Introduction</div>
@@ -331,5 +360,8 @@ function toggleFullScreen() {
 		 
 		
       </script>
+
+
+
    </body>
 </html>
