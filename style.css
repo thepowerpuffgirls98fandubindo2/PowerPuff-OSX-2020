@@ -340,6 +340,7 @@ body {
     border: 0;
     border-bottom: 0!important;
     box-sizing: content-box;
+    border-radius: 4px 4px 0px 0px;
 }
 
 .window_title_text {
