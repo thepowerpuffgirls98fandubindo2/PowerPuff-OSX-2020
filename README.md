@@ -1,5 +1,5 @@
 # PowerPuff-OS-X-jqdock
-Jen.lu/v1 Flash Player Porting to HTML5 Mac like in 2020
+Jen.lu/v1 Flash Player Porting and remade to HTML5 Mac like in 2020
 
 This uses:
 
