@@ -1,0 +1,19 @@
+<svg width="30" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <g id="shape0">
+   <path id="svg_1" fill-rule="evenodd" fill="url(#gradient0)" d="m1400,20l-1400,0l0,-20l1400,0l0,20"/>
+  </g>
+  <linearGradient y2="-0.45042" y1="0.95042" x2="0.50064" x1="0.50064" spreadMethod="pad" id="gradient0">
+   <stop stop-color="#333333" offset="0.00784"/>
+   <stop stop-color="#000000" offset="0.35294"/>
+   <stop stop-color="#333333" offset="0.36863"/>
+   <stop stop-color="#666666" offset="0.69804"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_2">
+   <use id="svg_3" xlink:href="#shape0" width="1400" height="20"/>
+  </g>
+ </g>
+</svg>
