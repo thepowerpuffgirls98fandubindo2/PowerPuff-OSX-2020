@@ -53,7 +53,7 @@ function openPufftunes(){
     x: "32%",
     y: "10%",
     width: "340px",
-    height: "265px",
+    height: "470px",
     url: "apps/tunes/index.html",
 	});
 }

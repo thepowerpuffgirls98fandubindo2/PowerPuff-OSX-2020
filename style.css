@@ -1,36 +1,9 @@
-html,
-body {
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
+html,body{height:100%;top:0;right:0;bottom:0;left:0;margin:0;padding:0;border:0}
 
-@font-face {
-    font-family: "Corporate";
-    src: url('fonts/138_FFF\ Corporate_8pt_st.ttf');
-}
-
-@font-face {
-    font-family: "Corporate";
-    src: url('fonts/47_FFF\ Corporate\ Bold_8pt_st.ttf');
-	font-weight: bold;
-}
-
-@font-face {
-    font-family: "Camera";
-    src: url('fonts/49_FFF\ Camera_8pt_st.ttf')
-}
-
-@font-face {
-    font-family: "Camera";
-    src: url('fonts/45_FFF\ Camera\ Bold_8pt_st.ttf');
-	font-weight: bold;
-}
+@font-face{font-family:"Corporate";src:url('fonts/138_FFF\ Corporate_8pt_st.ttf')}
+@font-face{font-family:"Corporate";src:url('fonts/47_FFF\ Corporate\ Bold_8pt_st.ttf');font-weight:700}
+@font-face{font-family:"Camera";src:url('fonts/49_FFF\ Camera_8pt_st.ttf')}
+@font-face{font-family:"Camera";src:url('fonts/45_FFF\ Camera\ Bold_8pt_st.ttf');font-weight:700}
 
 #backstore {
     font-family: "Camera";
@@ -42,7 +15,6 @@ body {
 	background-attachment: fixed;
 	width: 100%;
 	height: 100%;
-	
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -107,11 +79,6 @@ body {
     z-index: 2;
 }
 
-#nav li div {
-    position: relative;
-    z-index: 50000000;
-}
-
 #nav li div div {
     background-color: #FFFFFF;
     border-bottom: 1px solid #dadec9;
@@ -126,6 +93,11 @@ body {
     box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+#nav li div {
+    position: relative;
+    z-index: 5000000000000000000000;
 }
 
 #nav li div div.wrp2 {
@@ -262,148 +234,42 @@ body {
   top: 80px;
   right: 0;
 }
-
-
-
 /*winbox*/
-
-.winbox {
-    background: #545454;
-    border-radius: 10px 10px 0 0;
-    -webkit-box-shadow: 0px 8px 19px 1px rgb(0 0 0 / 75%);
-    -moz-box-shadow: 0px 8px 19px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 8px 19px 1px rgb(0 0 0 / 75%);
-	transition: none;
-}
-
-.winbox.min {
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-
-.winbox.min .wb-close {
-    display: none;
-}
-
-.winbox.min:hover {
-    background: red;
-}
-
-.winbox.min .wb-title{
-	padding-right: 0px;
-	text-align: left;
-	font-family: "Camera";
-	text-shadow: none;
-}
-
-.winbox.max {
-    width: 100%!important;
-	height: calc(100% - 20px)!important;
-}
-.winbox.max .wb-header{
-	border-radius: 0;
-}
-
-.wb-body {
-    /* the width of window border: */
-    margin: 0;
-    color: #000;
-    background: #fff;
-    top: 20px;
-    border-top: 1px solid #999999;
-    font-family: "Camera";
-	font-size: 8px;
-}
-
-.wb-header {
-    background: linear-gradient(180deg, #656565 0%, #141414 100%);
-    border-radius: 10px 10px 0 0;
-}
-
-.wb-header,
-.wb-icon {
-    height: 20px;
-}
-
-.winbox.min .wb-header {
-    border-radius: 0;
-    background: none;
-}
-
-.wb-title {
-    font-size: 8px;
-    text-transform: unset;
-    font-weight: unset;
-    line-height: 20px;
-    font-family: "Corporate";
-	font-weight: bold;
-	color: white;
-	text-shadow: 0 0 5px #000000;
-	text-align: center;
-	padding-right: 90px;
-}
-
-.wb-icon {
-    float: left;
-    direction: rtl;
-    margin-left: 8px;
-}
-
-.wb-icon * {
-    height: 20px;
-    width: 16px;
-    -webkit-filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.5));
-    -moz-filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.5));
-    margin-right: 2px;
-}
-
-.wb-icon *:hover {
-    opacity: 1;
-}
-
-.wb-min {
-    background-image: url(img/window/min.svg);
-    background-size: unset;
-    background-position: center;
-}
-
-.wb-max {
-    background-image: url(img/window/max.svg);
-    background-size: unset;
-}
-
-.wb-close {
-    background-image: url(img/window/close.svg);
-    background-size: unset;
-}
-
-.wb-full {
-    display: none;
-}
-
+.winbox{background:#545454;border-radius:10px 10px 0 0;-webkit-box-shadow:0 8px 19px 1px #000;-moz-box-shadow:0 8px 19px 1px rgba(0,0,0,0.75);box-shadow:0 8px 19px 1px #000;transition:none}
+.winbox.min{border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}
+.winbox.min .wb-close{display:none}
+.winbox.min:hover{background:red}
+.winbox.min .wb-title{padding-right:0;text-align:left;font-family:"Camera";text-shadow:none}
+.winbox.max{width:100%!important;height:calc(100% - 20px)!important}
+.winbox.max .wb-header{border-radius:0}
+.wb-body{margin:0;color:#000;background:#fff;top:20px;border-top:1px solid #999;font-family:"Camera";font-size:8px}
+.wb-header{background:linear-gradient(180deg,#656565 0%,#141414 100%);border-radius:10px 10px 0 0}
+.wb-header,.wb-icon{height:20px}
+.winbox.min .wb-header{border-radius:0;background:none}
+.wb-title{font-size:8px;text-transform:none;line-height:20px;font-family:"Corporate";font-weight:bold;color:#fff;text-shadow:0 0 5px #000;text-align:center;padding-right:90px}
+.wb-icon{float:left;direction:rtl;margin-left:8px}
+.wb-icon *{height:20px;width:16px;-webkit-filter:drop-shadow(0px 2px 1px rgba(0,0,0,0.5));-moz-filter:drop-shadow(0px 2px 1px rgba(0,0,0,0.5));filter:drop-shadow(0px 2px 1px rgba(0,0,0,0.5));margin-right:2px}
+.wb-icon :hover{opacity:1}
+.wb-min{background-image:url(img/window/min.svg);background-size:13px;background-size:auto;background-position:center}
+.wb-max{background-image:url(img/window/max.svg);background-size:13px;background-size:auto}
+.wb-close{background-image:url(img/window/close.svg);background-size:12px;background-size:auto}
+.wb-full {display: none;}
 .wb-body::-webkit-scrollbar {
     width: 12px;
 }
-
 .wb-body::-webkit-scrollbar-track {
     background: green;
 }
 .wb-body::-webkit-scrollbar-track-piece {
     background: green;
 }
-
 .wb-body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: #263040;
 }
-
 .wb-body::-webkit-scrollbar-thumb:window-inactive {
     background: #181f2a;
 }
-
 .wb-body::-webkit-scrollbar-corner {
     background: blue;
 }
