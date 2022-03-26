@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="jquery.terminal.min.js"></script>
+    <script src="jquery.mousewheel-min.js"></script>
+    <link href="jquery.terminal.min.css" rel="stylesheet" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .full-height {
+            height: 100%;
+            margin: 0;
+            background: white;
+            color: black;
+        }
+        
+        .cmd span[data-text]:not(.emoji):not(.fa):not(.fas):not(.far) span {
+            color: black
+        }
+        
+        .cmd,
+        .cmd div,
+        .cmd span[data-text]:not(.cmd-inverted):not(.token):not(.emoji),
+        .terminal,
+        .terminal-output>:not(.raw) a,
+        .terminal-output>:not(.raw) div,
+        .terminal-output>:not(.raw) span[data-text]:not(.token):not(.inverted):not(.terminal-inverted):not(.cmd-inverted):not(.terminal-error):not(.emoji),
+        .terminal.external [data-text] {
+            background: white;
+            color: black;
+        }
+        
+        div#kh {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kh" class="full-height"></div>
+    <script>
+        var __EVAL = (s) => eval(`void (__EVAL = ${__EVAL}); ${s}`);
+
+        $('#kh').terminal({
+            eval: function(command1) {
+                if (command1 !== '') {
+                    try {
+                        var result = __EVAL(command1);
+                        if (result !== undefined) {
+                            this.echo(new String(result));
+                        }
+                    } catch (e) {
+                        this.error(new String(e));
+                    }
+                } else {
+                    this.echo('');
+                }
+            },
+            cat: function(width, height) {
+                const img = $('<img src="https://placekitten.com/' +
+                    width + '/' + height + '">');
+                this.echo(img);
+            },
+            thisa: function() {
+                this.echo('this uses commands');
+                this.echo('eval parent.function_name()');
+            },
+            tunes: function() {
+                parent.openPufftunes()
+            },
+            terminal: function() {
+                this.echo('Powerpuff OS');
+            },
+
+        }, {
+            greetings: 'Powerpuff OS',
+            name: 'Powerpuff Girl',
+            prompt: 'PPG:~ '
+        });
+    </script>
+</body>
+
+</html>

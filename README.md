@@ -8,3 +8,4 @@ This uses:
 * [Menubar jquery](https://www.script-tutorials.com/click-action-css3-dropdown-menu-with-jquery/)
 * [Desktop Icon (Codepen) by Kasper Legarth](https://codepen.io/legarth/pen/jrKLqd)
 * [Music Player (Codepen) by Oscar Portorreal](https://codepen.io/OscarRD/pen/JWOObQ)
+* [Jquery Terminal](https://terminal.jcubic.pl/)
