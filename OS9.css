@@ -52,6 +52,7 @@ background: rgba(255,255,255,0.95);
 	.wb-title{
 	display: flex;
     flex: 1;
+	padding-left: 0px;
 	}
 	.wb-title::before,.wb-title::after{
 	content: "";
@@ -59,12 +60,15 @@ background: rgba(255,255,255,0.95);
 	background-image: repeating-linear-gradient( var(--title-light), var(--title-dark) 2px );
     margin-left: 5px;
     margin-right: 5px;
+	height: 12px;
+    margin-top: 5px;
 }
-	}
+
 	div.wb-icon{
-	margin-top: 3px;
-	margin-left: 5px;
+	margin-top: 2px;
+	margin-left: 4px;
 	}
+	
 	.wb-icon * {
     width: 9px;
     height: 9px;
@@ -75,20 +79,26 @@ background: rgba(255,255,255,0.95);
 	.wb-icon span{
 	    padding: 0;
 	}
-	.wb-close{
+	.wb-close, .wb-min, .wb-max{
 	border: 1px solid var(--window-border);
     background-image: linear-gradient( to bottom right, var(--shadow-dark), var(--shadow-light) );
     box-shadow: 1px 1px 0 var(--shadow-light), -1px -1px 0 var(--shadow-dark), inset 1px 1px 0 var(--window-bg), inset -1px -1px 0 var(--shadow-dark);
 	}
-	.wb-min{
-	width: 11px;
-    height: 11px;
-	    background: #F3BB55;
-		}
-		.wb-max{
-		width: 11px;
-    height: 11px;
-		background: #96D16F;}
+	.window-button:active,.wb-close:active, .wb-min:active, .wb-max:active {
+    background-image: linear-gradient(to bottom right, #444, #aaa);
+    box-shadow: 1px 1px 0 var(--shadow-light), -1px -1px 0 var(--shadow-dark);
+}
+.wb-min::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 31px;
+    right: 0;
+    width: 9px;
+    height: 1px;
+    border-top: 1px solid var(--window-border);
+    border-bottom: 1px solid var(--window-border);
+}
 	.wb-body{
 	border-top:1px solid #656565;
 	top: 21px;
