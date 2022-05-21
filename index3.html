@@ -7,277 +7,60 @@
     <title>Document</title>
     <link rel="stylesheet" href="dist/css/winbox.min.css" />
     <!-- <link rel="stylesheet" href="dist/css/themes/modern.min.css"> -->
-	<link rel="stylesheet" href="system/system.css">
+    <link rel="stylesheet" href="system/system.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
     <script src="dist/js/winbox.min.js"></script>
-	<style>
-	</style>
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <div class="os-menubar">
-        <span>
-            <ul id="nav">
-               <li>
-                  <a href="#" style="padding: 0px;"><img src="images/menubar/button.png"/></a>
-                  <div class="subs">
-                     <div>
-                        <ul>
-                           <li>
-                              <ul>
-                                 <li><a onclick="openabout()" href="#">About</a></li>
-                                 <li><a onclick="openhelp()" href="#">Help</a></li>
-                                 <li><a onclick="openCredits()" href="#">Credits</a></li>
-                                 <li><a href="#" onclick="toggleFullScreen()">Fullscreen</a></li>
-                                 <li><a href="#">Reset</a></li>
-                                 <li><a href="#" onclick="location.reload()">Restart</a></li>
-                                 <li><a href="#" onclick="ShutdownDialog()">Shutdown</a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </li>
-               <li>
-                  <a href="#">THEPPG</a>
-                  <div class="subs">
-                     <div>
-                        <ul>
-                           <li>
-                              <h3>Submenu #1</h3>
-                              <ul>
-                                 <li><a href="#" onclick="openabout()">About PPG OSX</a></li>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">Puff Tunes</a></li>
-                                 <li><a href="#">Browser</a></li>
-                                 <li><a href="#" onclick="openCommerce()">E-Commerce</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #2</h3>
-                              <ul>
-                                 <li><a href="#">Friend List</a></li>
-                                 <li><a href="#">Contact</a></li>
-                                 <li><a href="#">Help</a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </li>
-			   <li>
-                  <a href="#">STUFF</a>
-                  <div class="subs">
-                     <div>
-                        <ul>
-                           <li>
-                              <h3>Submenu #1</h3>
-                              <ul>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">Puff Tunes</a></li>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">VM</a></li>
-                                 <li><a href="#">NEW NEW NEW</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #2</h3>
-                              <ul>
-                                 <li><a href="#">Link 6</a></li>
-                                 <li><a href="#">Link 7</a></li>
-                                 <li><a href="#">Link 8</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #3</h3>
-                              <ul>
-                                 <li><a href="#">Link 9</a></li>
-                                 <li><a href="#">Link 10</a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </li>
-			   <li>
-                  <a href="#">PRINT</a>
-                  <div class="subs">
-                     <div>
-                        <ul>
-                           <li>
-                              <h3>Submenu #1</h3>
-                              <ul>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">Coloring Pages</a></li>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">VM</a></li>
-                                 <li><a href="#">NEW NEW NEW</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #2</h3>
-                              <ul>
-                                 <li><a href="#">Link 6</a></li>
-                                 <li><a href="#">Link 7</a></li>
-                                 <li><a href="#">Link 8</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #3</h3>
-                              <ul>
-                                 <li><a href="#">Link 9</a></li>
-                                 <li><a href="#">Link 10</a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </li>
-			   <li>
-                  <a href="#">PRODUCT</a>
-                  <div class="subs">
-                     <div>
-                        <ul>
-                           <li>
-                              <h3>Submenu #1</h3>
-                              <ul>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">Puff Tunes</a></li>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">VM</a></li>
-                                 <li><a href="#">NEW NEW NEW</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #2</h3>
-                              <ul>
-                                 <li><a href="#">Link 6</a></li>
-                                 <li><a href="#">Link 7</a></li>
-                                 <li><a href="#">Link 8</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #3</h3>
-                              <ul>
-                                 <li><a href="#">Link 9</a></li>
-                                 <li><a href="#">Link 10</a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </li>
-			   <li>
-                  <a href="#">LINKS</a>
-                  <div class="subs">
-                     <div>
-                        <ul>
-                           <li>
-                              <h3>Submenu #1</h3>
-                              <ul>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">Puff Tunes</a></li>
-                                 <li><a href="#" onclick="PuffTunes('wrapper')">VM</a></li>
-                                 <li><a href="#">NEW NEW NEW</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #2</h3>
-                              <ul>
-                                 <li><a href="#">Link 6</a></li>
-                                 <li><a href="#">Link 7</a></li>
-                                 <li><a href="#">Link 8</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <h3>Submenu #3</h3>
-                              <ul>
-                                 <li><a href="#">Link 9</a></li>
-                                 <li><a href="#">Link 10</a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </li>
-               <li><a href="https://www.script-tutorials.com/about/"></a></li>
-               
-            </ul>
-			<ul id="nav" class="right">
-				<li><a href="https://www.script-tutorials.com/click-action-css3-dropdown-menu-with-jquery/"></a></li>
-				<li><a href="#"><span id="clock-wrapper">HH:MM:SS</span> <span id="date-wrapper">DAY</span></a>
-        <div class="subs">
-            <div>
-                <ul>
-                    <li>
-                        <ul>
+    <div class="os-menubar" id="MenuBarItems">
 
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </li>
-        <li><a href="#"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a>
-            <div class="subs">
-                <div>
-                    <ul>
-                        <li>
-                            <h3>Submenu #1</h3>
-                            <ul>
-                                <li><a href="#">Link 4</a></li>
-                                <li><a href="#">Link 4</a></li>
-                                <li><a href="#">Link 4</a></li>
-                                <li><a href="#">Link 4</a></li>
-                                <li><a href="#">Link 5</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        </ul>
-        </span>
     </div>
-    
-<div id="desktop-screen">
-  <div id="computer" class="computer icon" data-label="Computer"></div>
-  <div id="test-file" class="test-file icon" data-label="Test.txt"></div>
-  <div id="trash" class="trash-empty icon" data-label="Recycle Bin"></div>
-</div>
+
+    <div id="desktop-screen">
+        <div id="computer" class="computer icon" data-label="Computer"></div>
+        <div id="test-file" class="test-file icon" data-label="Test.txt"></div>
+        <div id="trash" class="trash-empty icon" data-label="Recycle Bin"></div>
+    </div>
 
 
-	
-	<div id="backstore" style="display: none">
-      <div id="win_about">
-          <h1>Lorem Ipsum</h1>
-          <p>Lorem ipsum [...]</p>
-          <p>Duis autem vel [...]</p>
-          <p>Ut wisi enim [...]</p>
-      </div>
-	  <div id="win_help">
-	<ol>
-	<li>Double click to open the desktop icons</li>
-	<li>Drag icons</li>
-	<li>Menus at the top have system information, applications and featured work</li>
-	<li>Drag and pick up the Blossom, Bubbles, or Buttercup</li>
-	<li>Double click Powerpuf Girls for "release"</li>
-	</ol>
-	Don't be afraid to click around!
-	</div>
-	<div id="win_credits" style="padding:2px">
-	<p><a href="https://nextapps-de.github.io/winbox/">Winbox.js</a></p>
-	<p><a href="https://www.script-tutorials.com/click-action-css3-dropdown-menu-with-jquery/">Menu Bar</a></p>
-	<p><a href="https://jquery.com/">jQuery</a></p>
-	<p><a href="https://ruffle.rs/">Ruffle</a></p>
-	</div>
-	</div>
-	
-	<script src="desktop.js"></script>
-	<script type="text/javascript" src="system.js"></script>
 
-<script>
+    <div id="backstore" style="display: none">
+        <div id="win_about">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum [...]</p>
+            <p>Duis autem vel [...]</p>
+            <p>Ut wisi enim [...]</p>
+        </div>
+        <div id="win_help">
+            <ol>
+                <li>Double click to open the desktop icons</li>
+                <li>Drag icons</li>
+                <li>Menus at the top have system information, applications and featured work</li>
+                <li>Drag and pick up the Blossom, Bubbles, or Buttercup</li>
+                <li>Double click Powerpuf Girls for "release"</li>
+            </ol>
+            Don't be afraid to click around!
+        </div>
+        <div id="win_credits" style="padding:2px">
+            <p><a href="https://nextapps-de.github.io/winbox/">Winbox.js</a></p>
+            <p><a href="https://www.script-tutorials.com/click-action-css3-dropdown-menu-with-jquery/">Menu Bar</a></p>
+            <p><a href="https://jquery.com/">jQuery</a></p>
+            <p><a href="https://ruffle.rs/">Ruffle</a></p>
+        </div>
+    </div>
 
+    <script src="desktop.js"></script>
+    <script type="text/javascript" src="system.js"></script>
 
-</script>
-  
+    <script>
+    </script>
+
 </body>
 
 </html>
