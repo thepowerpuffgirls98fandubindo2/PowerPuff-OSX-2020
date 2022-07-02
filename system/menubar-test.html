@@ -1,0 +1,54 @@
+<html>
+<body>
+<div class="os-menubar">
+<ul id="navb">
+</ul>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+<script>
+
+var JSONmenubar = {
+    menub: [
+        {name: 'Croatia', link: '0', sub: null
+        },
+        {name: 'England', link: '1', sub: [
+            {name: 'Arsenal',link:'#', action1: "alert('dw')", sub: null},
+            {name: 'Liverpool',link: '0-1', sub: null},
+            {name: 'Manchester United',link: '0-2', sub: null}
+            ]},
+        {name: 'Spain', link: '2', sub: [
+            {name: 'Barcelona',link: '2-0', sub: null},
+            {name: 'Real Madrid',link: '2-1', sub: null}
+        ]},        
+        {name: 'Germany', link: '3',sub: [
+            {name: 'Bayern Munich',link: '3-1', sub: null},
+            {name: 'Borrusia Dortmund',link: '3-2', sub: null}
+            ]}
+    ]
+}
+
+$(function () {
+    
+	
+	
+    function parseMenubr(ul, menub) {
+	for (var i=0;i<menub.length;i++) {
+		var li=$(ul).append('<li><a href="'+menub[i].link+'" onclick="'+menub[i].action1+'">'+menub[i].name+'</a></li>');
+		if (menub[i].sub!=null) {
+		//	var subul=$('<ul id="submenu'+menub[i].link+'"></ul>');
+			var subul=$('<ul id="submenu'+menub[i].link+'"></ul>');
+			$(li).append(subul);
+			parseMenubr($(subul), menub[i].sub);
+		}
+	}
+}
+
+var menub=$('#navb');
+parseMenubr(menub, JSONmenubar.menub);
+
+ 
+ });
+</script>
+</body>
+</html>
